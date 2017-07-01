@@ -2,4 +2,4 @@
 
 Some screenshots showing the working of the app
 
-![Alt text](/Screen/Capture.png)
+![Alt text](/screen/Capture.png)
