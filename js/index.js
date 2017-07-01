@@ -16,7 +16,7 @@ $("ul").on('click','li',function()
 	$(this).toggleClass("chcked");
 });
 //click on x to delete to do 
-$("ul").on('click','span',function() //event is added to avoid bubbling
+$("ul").on('click','span',function(event) //event is added to avoid bubbling
 {
 	$(this).parent().fadeOut(500,function()
 	{
@@ -32,8 +32,12 @@ $("input[type='text']").keypress(function(event)
 		//getting the input and storing it
 		var inp=$(this).val();
 		//create a new li and add it to ul
-		$("ul").append("<li><span>X</span> " + inp + "</li>");
+		$("ul").append("<li><span><i class='fa fa-trash' aria-hidden='true'></i></span> " + inp + "</li>");
 
 		$(this).val("");
 	}
+});
+$(".fa-plus").click(function()
+{
+	$("input[type='text']").fadeToggle(500);
 });
